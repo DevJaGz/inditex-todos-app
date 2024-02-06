@@ -2,14 +2,9 @@
 import tailwindCSSAnimated from 'tailwindcss-animated';
 
 module.exports = {
-  content: [
-    "./src/**/*.{html,ts}",
-  ],
+  content: ['./src/**/*.{html,ts}'],
   theme: {
     extend: {},
   },
-  plugins: [
-    tailwindCSSAnimated
-  ],
-}
-
+  plugins: [tailwindCSSAnimated],
+};

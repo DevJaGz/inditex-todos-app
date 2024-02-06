@@ -13,13 +13,10 @@ import { TodoDetailComponent } from './pages/todo-detail/todo-detail.component';
     AppComponent,
     ListTodosComponent,
     AddTodoComponent,
-    TodoDetailComponent
+    TodoDetailComponent,
   ],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(routes)
-  ],
+  imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
