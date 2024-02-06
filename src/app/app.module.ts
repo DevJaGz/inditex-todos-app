@@ -28,7 +28,7 @@ import { FormsModule } from '@angular/forms';
     StoreModule.forRoot(metaReducer, {
       metaReducers,
     }),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: isDevMode() }),
   ],
   providers: [],
   bootstrap: [AppComponent],
