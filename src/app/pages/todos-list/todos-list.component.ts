@@ -6,12 +6,12 @@ import { selectTodoAction, removeTodoAction } from '@store/actions';
 import { selectTodosListState } from '@store/selectors';
 
 @Component({
-  selector: 'app-list-todos',
-  templateUrl: './list-todos.component.html',
+  selector: 'app-todos-list',
+  templateUrl: './todos-list.component.html',
   styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ListTodosComponent {
+export class TodosListComponent {
   private readonly store = inject(Store);
 
   todos$: Observable<Todo[]> = this.store.select(selectTodosListState);

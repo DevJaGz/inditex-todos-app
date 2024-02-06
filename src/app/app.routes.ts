@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import {
-  ListTodosComponent,
+  TodosListComponent,
   AddTodoComponent,
   TodoDetailComponent,
 } from '@pages';
@@ -8,7 +8,7 @@ import {
 export const routes: Routes = [
   {
     path: '',
-    component: ListTodosComponent,
+    component: TodosListComponent,
   },
   {
     path: 'add',
