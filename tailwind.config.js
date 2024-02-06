@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-import tailwindCSSAnimated from 'tailwindcss-animated';
 
 module.exports = {
-  content: ['./src/**/*.{html,ts}'],
+  darkMode: 'class',
+  content: ['./src/**/*.{html,ts}', './node_modules/flowbite/**/*.js'],
   theme: {
     extend: {},
   },
-  plugins: [tailwindCSSAnimated],
+  plugins: [require('tailwindcss-animated'), require('flowbite/plugin')],
 };
