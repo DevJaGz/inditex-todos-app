@@ -1,4 +1,5 @@
-<header class="flex items-center justify-around py-8 max-w-screen-xl mx-auto">
+<header
+  class="flex items-center justify-around py-8 max-w-screen-xl mx-auto bg-zinc-900/40 backdrop-blur-sm">
   <h1 class="text-2xl font-semibold">To Do</h1>
   <ng-container *ngIf="hasSelectedTodo$ | async; else navMenuTempl">
     <a

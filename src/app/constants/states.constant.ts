@@ -23,6 +23,51 @@ export const INITIAL_TODOS_STATE: TodosState = {
       name: 'Remove One',
       description: 'Click on the trash icon and remove the TODO',
     },
+    {
+      id: generateId(),
+      name: 'Add One',
+      description: 'Click on the Add button that is on top and fill the form',
+    },
+    {
+      id: generateId(),
+      name: 'See Details',
+      description: 'Click on the eye icon and see the details',
+    },
+    {
+      id: generateId(),
+      name: 'Remove One',
+      description: 'Click on the trash icon and remove the TODO',
+    },
+    {
+      id: generateId(),
+      name: 'Add One',
+      description: 'Click on the Add button that is on top and fill the form',
+    },
+    {
+      id: generateId(),
+      name: 'See Details',
+      description: 'Click on the eye icon and see the details',
+    },
+    {
+      id: generateId(),
+      name: 'Remove One',
+      description: 'Click on the trash icon and remove the TODO',
+    },
+    {
+      id: generateId(),
+      name: 'Add One',
+      description: 'Click on the Add button that is on top and fill the form',
+    },
+    {
+      id: generateId(),
+      name: 'See Details',
+      description: 'Click on the eye icon and see the details',
+    },
+    {
+      id: generateId(),
+      name: 'Remove One',
+      description: 'Click on the trash icon and remove the TODO',
+    },
   ],
   selected: null,
 };
