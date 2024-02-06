@@ -15,7 +15,7 @@ export const routes: Routes = [
     component: AddTodoComponent,
   },
   {
-    path: 'list/:id',
+    path: 'list/:todoId',
     component: TodoDetailComponent,
   },
   {

@@ -7,6 +7,7 @@ import {
 import { Todo } from '@interfaces';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { selectTodo } from 'src/app/store/actions';
 import { selectTodosListState } from 'src/app/store/selectors';
 
 @Component({
@@ -16,7 +17,7 @@ import { selectTodosListState } from 'src/app/store/selectors';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ListTodosComponent {
-  private store = inject(Store);
+  private readonly store = inject(Store);
 
   todos$: Observable<Todo[]> = this.store.select(selectTodosListState);
 
@@ -25,7 +26,7 @@ export class ListTodosComponent {
   }
 
   selectTodo(todo: Todo): void {
-    console.log('select todo:', todo);
+    this.store.dispatch(selectTodo({ todo }));
   }
 
   private removeTodo(todo: Todo): void {

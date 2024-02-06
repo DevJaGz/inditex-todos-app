@@ -1,27 +1,12 @@
 <header class="flex items-center justify-around py-8 max-w-screen-xl mx-auto">
   <h1 class="text-2xl font-semibold">To Do</h1>
-  <ul
-    class="dark:bg-zinc-800 rounded-full flex items-center overflow-hidden shadow">
-    <li>
-      <a
-        class="block px-4 py-2 text-zinc-500 font-semibold uppercase"
-        routerLinkActive="bg-zinc-700 !text-white"
-        [routerLinkActiveOptions]="{
-          exact: true
-        }"
-        routerLink=""
-        >List</a
-      >
-    </li>
-    <li>
-      <a
-        class="block px-4 py-2 font-semibold text-zinc-500 uppercase"
-        routerLinkActive="bg-zinc-700 !text-white"
-        routerLink="add"
-        >Add</a
-      >
-    </li>
-  </ul>
+  <ng-container *ngIf="hasSelectedTodo$ | async; else navMenuTempl">
+    <a
+      class="block px-4 py-2 bg-zinc-800 rounded-full font-semibold uppercase"
+      routerLink=""
+      >BACK</a
+    >
+  </ng-container>
   <a
     class="hover:text-zinc-200"
     href="https://github.com/DevJaGz"
@@ -46,3 +31,28 @@
     </svg>
   </a>
 </header>
+
+<ng-template #navMenuTempl>
+  <ul
+    class="dark:bg-zinc-800 rounded-full flex items-center overflow-hidden shadow">
+    <li>
+      <a
+        class="block px-4 py-2 text-zinc-500 font-semibold uppercase"
+        routerLinkActive="bg-zinc-700 !text-white"
+        [routerLinkActiveOptions]="{
+          exact: true
+        }"
+        routerLink=""
+        >List</a
+      >
+    </li>
+    <li>
+      <a
+        class="block px-4 py-2 font-semibold text-zinc-500 uppercase"
+        routerLinkActive="bg-zinc-700 !text-white"
+        routerLink="add"
+        >Add</a
+      >
+    </li>
+  </ul>
+</ng-template>
