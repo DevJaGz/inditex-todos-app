@@ -6,4 +6,5 @@ export interface MetaReducerState {
 
 export interface TodosState {
   list: Todo[];
+  selected: Todo | null;
 }

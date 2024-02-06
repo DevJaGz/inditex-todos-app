@@ -1,2 +1,2 @@
 export * from './meta.reducer';
-export * from './todos.reducer';
+export * from './todos.reducers';

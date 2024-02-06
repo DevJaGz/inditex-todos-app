@@ -13,4 +13,5 @@ export const INITIAL_TODOS_STATE: TodosState = {
       description: 'todo2 description',
     },
   ],
+  selected: null,
 };
