@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -9,6 +9,7 @@ import { AddTodoComponent } from './pages/add-todo/add-todo.component';
 import { TodoDetailComponent } from './pages/todo-detail/todo-detail.component';
 import { StoreModule } from '@ngrx/store';
 import { metaReducer } from './store/reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { metaReducer } from './store/reducers';
     BrowserModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot(metaReducer, {}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
   providers: [],
   bootstrap: [AppComponent],
