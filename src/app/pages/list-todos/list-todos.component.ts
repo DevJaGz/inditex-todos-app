@@ -7,7 +7,7 @@ import {
 import { Todo } from '@interfaces';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { selectTodo } from 'src/app/store/actions';
+import { selectTodo, removeTodo } from 'src/app/store/actions';
 import { selectTodosListState } from 'src/app/store/selectors';
 
 @Component({
@@ -30,6 +30,6 @@ export class ListTodosComponent {
   }
 
   private removeTodo(todo: Todo): void {
-    console.log('remove todo:', todo);
+    this.store.dispatch(removeTodo({ todo }));
   }
 }

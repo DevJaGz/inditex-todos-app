@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import { INITIAL_TODOS_STATE } from 'src/app/constants';
-import { selectTodo } from '../actions';
+import { removeTodo, selectTodo } from '../actions';
 import { Todo, TodosState } from '@interfaces';
 
 const selectTodoReducer = (
@@ -13,7 +13,18 @@ const selectTodoReducer = (
   };
 };
 
+const removeTodoReducer = (
+  state: TodosState,
+  actionProps: { todo: Todo }
+): TodosState => {
+  return {
+    ...state,
+    list: state.list.filter(todo => todo.id !== actionProps.todo.id),
+  };
+};
+
 export const todosReducer = createReducer(
   INITIAL_TODOS_STATE,
-  on(selectTodo, selectTodoReducer)
+  on(selectTodo, selectTodoReducer),
+  on(removeTodo, removeTodoReducer)
 );
