@@ -1,14 +1,9 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnInit,
-  inject,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Todo } from '@interfaces';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { selectTodo, removeTodo } from 'src/app/store/actions';
-import { selectTodosListState } from 'src/app/store/selectors';
+import { selectTodoAction, removeTodoAction } from '@store/actions';
+import { selectTodosListState } from '@store/selectors';
 
 @Component({
   selector: 'app-list-todos',
@@ -26,10 +21,10 @@ export class ListTodosComponent {
   }
 
   selectTodo(todo: Todo): void {
-    this.store.dispatch(selectTodo({ todo }));
+    this.store.dispatch(selectTodoAction({ todo }));
   }
 
   private removeTodo(todo: Todo): void {
-    this.store.dispatch(removeTodo({ todo }));
+    this.store.dispatch(removeTodoAction({ todo }));
   }
 }

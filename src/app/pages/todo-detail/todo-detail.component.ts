@@ -10,8 +10,8 @@ import { Todo } from '@interfaces';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
-import { selectTodo } from 'src/app/store/actions';
-import { selectTodosListState } from 'src/app/store/selectors';
+import { selectTodoAction } from '@store/actions';
+import { selectTodosListState } from '@store/selectors';
 
 @Component({
   selector: 'app-todo-detail',
@@ -34,14 +34,14 @@ export class TodoDetailComponent implements OnInit, OnDestroy {
   }
 
   private unselectTodo(): void {
-    this.store.dispatch(selectTodo({ todo: null }));
+    this.store.dispatch(selectTodoAction({ todo: null }));
   }
 
   private handleSelectedTodo(): void {
     const todoId = this.activatedRoute.snapshot.params['todoId'];
     this.todo$ = this.getTodo(todoId).pipe(
       tap({
-        next: todo => this.store.dispatch(selectTodo({ todo })),
+        next: todo => this.store.dispatch(selectTodoAction({ todo })),
       })
     );
   }

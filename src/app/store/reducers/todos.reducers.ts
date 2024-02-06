@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import { INITIAL_TODOS_STATE } from 'src/app/constants';
-import { addTodo, removeTodo, selectTodo } from '../actions';
+import { addTodoAction, removeTodoAction, selectTodoAction } from '../actions';
 import { Todo, TodosState } from '@interfaces';
 
 const selectTodoReducer = (
@@ -35,7 +35,7 @@ const addTodoReducer = (
 
 export const todosReducer = createReducer(
   INITIAL_TODOS_STATE,
-  on(selectTodo, selectTodoReducer),
-  on(removeTodo, removeTodoReducer),
-  on(addTodo, addTodoReducer)
+  on(selectTodoAction, selectTodoReducer),
+  on(removeTodoAction, removeTodoReducer),
+  on(addTodoAction, addTodoReducer)
 );

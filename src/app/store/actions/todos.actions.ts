@@ -7,14 +7,17 @@ enum Actions {
   AddTodo = '[TODOS STATE] Add TODO',
 }
 
-export const selectTodo = createAction(
+export const selectTodoAction = createAction(
   Actions.SelectTodo,
   props<{ todo: Todo | null }>()
 );
 
-export const removeTodo = createAction(
+export const removeTodoAction = createAction(
   Actions.RemoveTodo,
   props<{ todo: Todo }>()
 );
 
-export const addTodo = createAction(Actions.AddTodo, props<{ todo: Todo }>());
+export const addTodoAction = createAction(
+  Actions.AddTodo,
+  props<{ todo: Todo }>()
+);

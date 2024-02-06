@@ -1,16 +1,22 @@
 import { TodosState } from '../interfaces';
+import { generateId } from '../utils/generators.util';
 
 export const INITIAL_TODOS_STATE: TodosState = {
   list: [
     {
-      id: '1',
-      name: 'todo1',
-      description: 'todo1 description',
+      id: generateId(),
+      name: 'Add One',
+      description: 'Click on the Add button that is on top and fill the form',
     },
     {
-      id: '2',
-      name: 'todo2',
-      description: 'todo2 description',
+      id: generateId(),
+      name: 'See Details',
+      description: 'Click on the eye icon and see the details',
+    },
+    {
+      id: generateId(),
+      name: 'Remove One',
+      description: 'Click on the trash icon and remove the TODO',
     },
   ],
   selected: null,

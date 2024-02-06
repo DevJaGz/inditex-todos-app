@@ -11,6 +11,7 @@ import { StoreModule } from '@ngrx/store';
 import { metaReducer } from './store/reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot(metaReducer, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
