@@ -24,7 +24,8 @@
       "@pages": ["src/app/pages"],
       "@interfaces": ["src/app/interfaces"],
       "@store/*": ["src/app/store/*"],
-      "@utils": ["src/app/utils"]
+      "@utils": ["src/app/utils"],
+      "@constants": ["src/app/constants"]
     }
   },
   "angularCompilerOptions": {

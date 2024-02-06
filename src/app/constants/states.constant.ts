@@ -1,5 +1,10 @@
-import { TodosState } from '../interfaces';
+import { Todo, TodosState } from '../interfaces';
 import { generateId } from '../utils/generators.util';
+
+export const INITIAL_TODO_STATE: Todo = {
+  name: '',
+  description: '',
+};
 
 export const INITIAL_TODOS_STATE: TodosState = {
   list: [
