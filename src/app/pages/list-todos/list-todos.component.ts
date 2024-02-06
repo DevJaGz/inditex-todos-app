@@ -1,6 +1,13 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  inject,
+} from '@angular/core';
 import { Todo } from '@interfaces';
-import { of } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { selectTodosListState } from 'src/app/store/selectors';
 
 @Component({
   selector: 'app-list-todos',
@@ -9,21 +16,16 @@ import { of } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ListTodosComponent {
-  todos$ = of([
-    {
-      id: '1',
-      name: 'todo1',
-      description: 'todo1 description',
-    },
-    {
-      id: '2',
-      name: 'todo2',
-      description: 'todo2 description',
-    },
-  ]);
+  private store = inject(Store);
+
+  todos$: Observable<Todo[]> = this.store.select(selectTodosListState);
 
   confirmRemoveTodo(todo: Todo): void {
     this.removeTodo(todo);
+  }
+
+  selectTodo(todo: Todo): void {
+    console.log('select todo:', todo);
   }
 
   private removeTodo(todo: Todo): void {
