@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "format": "prettier --write .",
-    "pre-commit": "ng lint --fix && npm run format",
+    "pre-commit": "ng lint --fix && npm run format && git add .",
     "prepare": "husky"
   },
   "private": true,
