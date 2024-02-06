@@ -10,6 +10,7 @@ import { TodoDetailComponent } from './pages/todo-detail/todo-detail.component';
 import { StoreModule } from '@ngrx/store';
 import { metaReducer } from './store/reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     ListTodosComponent,
     AddTodoComponent,
     TodoDetailComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
