@@ -22,7 +22,7 @@
     "lib": ["ES2022", "dom"],
     "paths": {
       "@pages": ["src/app/pages"],
-      "@interfaces": ["src/app/interfaces"],
+      "@interfaces": ["src/app/interfaces"]
     }
   },
   "angularCompilerOptions": {
