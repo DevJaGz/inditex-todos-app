@@ -1,1 +1,16 @@
-<p>todo-detail works!</p>
+<ng-container *ngIf="todo$ | async as todo">
+  <div class="grid place-items-center mt-40">
+    <article
+      class="border border-zinc-700 rounded-lg p-4 min-w-64 flex flex-col gap-4">
+      <h1 class="text-2xl font-semibold">Details</h1>
+      <main>
+        <strong>Name:</strong>
+        <span class="text-zinc-500"> {{ todo.name }} </span>
+        <div class="mt-4">
+          <strong>Description:</strong>
+          <p class="text-zinc-500 line-clamp-5">{{ todo.description }}</p>
+        </div>
+      </main>
+    </article>
+  </div>
+</ng-container>

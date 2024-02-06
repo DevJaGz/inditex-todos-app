@@ -23,7 +23,7 @@ export class TodoDetailComponent implements OnInit, OnDestroy {
   private readonly store = inject(Store);
   private readonly activatedRoute = inject(ActivatedRoute);
 
-  todo$!: Observable<Todo | undefined>;
+  todo$!: Observable<Todo | null>;
 
   ngOnInit(): void {
     this.handleSelectedTodo();
@@ -41,17 +41,18 @@ export class TodoDetailComponent implements OnInit, OnDestroy {
     const todoId = this.activatedRoute.snapshot.params['todoId'];
     this.todo$ = this.getTodo(todoId).pipe(
       tap({
-        next: todo => {
-          if (todo) this.store.dispatch(selectTodo({ todo }));
-        },
+        next: todo => this.store.dispatch(selectTodo({ todo })),
       })
     );
   }
 
-  private getTodo(todoId: string): Observable<Todo | undefined> {
+  private getTodo(todoId: string): Observable<Todo | null> {
     const filter = (todo: Todo) => todo.id === todoId;
-    return this.store
-      .select(selectTodosListState)
-      .pipe(map(todos => todos.find(filter)));
+    return this.store.select(selectTodosListState).pipe(
+      map(todos => {
+        const todo = todos.find(filter) || null;
+        return todo;
+      })
+    );
   }
 }
