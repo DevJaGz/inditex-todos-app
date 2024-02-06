@@ -1,14 +1,16 @@
 <ng-container *ngIf="todo$ | async as todo; else emptyTmpl">
-  <div class="grid place-items-center mt-40">
+  <div class="grid place-items-center mt-20">
     <article
       class="border border-zinc-700 rounded-lg p-4 min-w-64 flex flex-col gap-4">
-      <h2 class="text-xl font-semibold">Details</h2>
-      <main>
-        <strong>Name:</strong>
-        <span class="text-zinc-500"> {{ todo.name }} </span>
+      <h2 class="text-xl font-semibold text-right text-zinc-500">Details</h2>
+      <main class="pb-2">
         <div class="mt-4">
-          <strong>Description:</strong>
-          <p class="text-zinc-500 line-clamp-5">{{ todo.description }}</p>
+          <span class="text-zinc-500">Name:</span>
+          <p class="line-clamp-2">{{ todo.name }}</p>
+        </div>
+        <div class="mt-4">
+          <span class="text-zinc-500">Description:</span>
+          <p class="line-clamp-5">{{ todo.description }}</p>
         </div>
       </main>
     </article>

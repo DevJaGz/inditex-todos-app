@@ -17,6 +17,7 @@ export class TodosListComponent {
   todos$: Observable<Todo[]> = this.store.select(selectTodosListState);
 
   confirmRemoveTodo(todo: Todo): void {
+    // TODO: Implement confirmation dialog
     this.removeTodo(todo);
   }
 

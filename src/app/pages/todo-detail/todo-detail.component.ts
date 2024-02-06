@@ -41,9 +41,7 @@ export class TodoDetailComponent implements OnInit, OnDestroy {
     const todoId = this.activatedRoute.snapshot.params['todoId'];
     this.todo$ = this.getTodo(todoId).pipe(
       tap({
-        next: todo => {
-          if (todo) this.store.dispatch(selectTodoAction({ todo }));
-        },
+        next: todo => this.store.dispatch(selectTodoAction({ todo })),
       })
     );
   }
