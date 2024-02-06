@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-list-todos',
@@ -6,4 +7,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ListTodosComponent {}
+export class ListTodosComponent {
+  todos$ = of([
+    {
+      name: 'todo1',
+      description: 'todo1 description',
+    },
+    {
+      name: 'todo2',
+      description: 'todo2 description',
+    },
+  ]);
+}
