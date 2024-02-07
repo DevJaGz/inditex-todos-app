@@ -33,11 +33,11 @@ describe('AppComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render NavbarComponent component', () => {
+  it('should render NavbarComponent', () => {
     expect(fixture.debugElement.query(By.css('app-navbar'))).toBeTruthy();
   });
 
-  it('should render AddTodoButtonComponent component', () => {
+  it('should render AddTodoButtonComponent', () => {
     expect(
       fixture.debugElement.query(By.css('app-add-todo-button'))
     ).toBeTruthy();
