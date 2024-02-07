@@ -15,6 +15,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ICONS } from './constants/icons.constant';
 import { ThemeButtonComponent } from './components/theme-button/theme-button.component';
 import { AddTodoButtonComponent } from './components/add-todo-button/add-todo-button.component';
+import { TodoComponent } from './components/todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AddTodoButtonComponent } from './components/add-todo-button/add-todo-bu
     NavbarComponent,
     ThemeButtonComponent,
     AddTodoButtonComponent,
+    TodoComponent,
   ],
   imports: [
     BrowserModule,
