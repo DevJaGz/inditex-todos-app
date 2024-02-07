@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
+import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { environment } from 'src/environments/environment';
 import { routes } from './app.routes';
+import { StoreModule } from '@ngrx/store';
+import { metaReducer, metaReducers } from './store/reducers';
+import { TablerIconsModule } from 'angular-tabler-icons';
 import { TodosListComponent } from './pages/todos-list/todos-list.component';
 import { AddTodoComponent } from './pages/add-todo/add-todo.component';
 import { TodoDetailComponent } from './pages/todo-detail/todo-detail.component';
-import { StoreModule } from '@ngrx/store';
-import { metaReducer, metaReducers } from './store/reducers';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { FormsModule } from '@angular/forms';
-import { environment } from 'src/environments/environment';
+import { ICONS } from './constants/icons.constant';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { environment } from 'src/environments/environment';
       metaReducers,
     }),
     ...environment.extModules,
+    TablerIconsModule.pick(ICONS),
   ],
   providers: [],
   bootstrap: [AppComponent],
