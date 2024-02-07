@@ -1,5 +1,8 @@
 <h1 align="center">
-  Inditex To-Do App
+  <br>
+    <img src="./docs/images/todo-list.png" alt="app" width=400" style="border-radius: 4px">
+  <br>
+  To-Do List
 </h1>
 
 <div align="center">
