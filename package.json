@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "test": "ng test",
+    "test:coverage": "ng test --no-watch --code-coverage",
     "format": "prettier --write .",
     "pre-commit": "ng lint && npm run format && git add .",
     "prepare": "husky"
