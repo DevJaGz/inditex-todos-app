@@ -1,30 +1,29 @@
 <ng-container *ngIf="todo$ | async as todo; else emptyTmpl">
-  <div class="grid place-items-center mt-20">
-    <article
-      class="border border-zinc-700 rounded-lg p-4 min-w-64 flex flex-col gap-4">
-      <h2 class="text-xl font-semibold text-right text-zinc-500">Details</h2>
-      <main class="pb-2">
-        <div class="mt-4">
-          <span class="text-zinc-500">Name:</span>
-          <p class="line-clamp-2">{{ todo.name }}</p>
-        </div>
-        <div class="mt-4">
-          <span class="text-zinc-500">Description:</span>
-          <p class="line-clamp-5">{{ todo.description }}</p>
-        </div>
-      </main>
-    </article>
-  </div>
+  <h2
+    title=" {{ todo.name | titlecase }}"
+    class="text-3xl font-semibold text-center text-zinc-500 mt-10 sm:mt-20 line-clamp-3">
+    {{ todo.name | titlecase }}
+  </h2>
+  <p class="mt-4 text-center">{{ todo.description }}</p>
+  <a
+    class="flex items-center gap-1 w-fit mt-8 mx-auto text-white font-medium rounded-lg text-sm px-6 py-3 text-center bg-zinc-900 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-zinc-300 dark:bg-zinc-600 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800 transition-colors"
+    routerLink="">
+    <tabler-icon name="arrow-back-up" class="!w-5 !h-5"></tabler-icon>
+    <span>Back</span></a
+  >
 </ng-container>
 
 <ng-template #emptyTmpl>
   <div class="grid place-items-center mt-20">
-    <h2 class="text-xl font-semibold">Doesn't exist</h2>
-    <p class="text-zinc-500">You don't have the Todo you're trying to see</p>
+    <h2 class="text-xl font-semibold">Ups!</h2>
+    <p class="text-orange-500 mt-4">
+      You don't have the To-do you're trying to see
+    </p>
     <a
-      class="mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      routerLink=""
-      >Back</a
+      class="flex items-center gap-1 w-fit mt-8 mx-auto text-white font-medium rounded-lg text-sm px-6 py-3 text-center bg-zinc-900 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-zinc-300 dark:bg-zinc-600 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800 transition-colors"
+      routerLink="">
+      <tabler-icon name="arrow-back-up" class="!w-5 !h-5"></tabler-icon>
+      <span>Back</span></a
     >
   </div>
 </ng-template>
