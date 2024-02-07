@@ -4,6 +4,8 @@ import {
   IconBrightnessUp,
   IconBrandGithub,
   IconMoonStars,
+  IconPlus,
+  IconArrowBackUp,
 } from 'angular-tabler-icons/icons';
 
 export const ICONS = {
@@ -12,4 +14,6 @@ export const ICONS = {
   IconBrandGithub,
   IconBrightnessUp,
   IconMoonStars,
+  IconPlus,
+  IconArrowBackUp,
 };
