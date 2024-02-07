@@ -1,5 +1,5 @@
 <h1 align="center">
-  Inditex ToDo App
+  Inditex To-Do App
 </h1>
 
 <div align="center">
