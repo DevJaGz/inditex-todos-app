@@ -1,27 +1,55 @@
-# InditexTodosApp
+<h1 align="center">
+  Inditex ToDo App
+</h1>
+<div align="center">
+  <a href="https://angular.io/" target="_blank">
+    <img src="https://img.shields.io/badge/Angular-%23c3002f?logo=angular" alt="Angular">
+  </a>
+  </a>
+    <a href="https://firebase.google.com/" target="_blank">
+    <img src="https://img.shields.io/badge/NgRx-4b334d?logo=ngrx" alt="Firebase">
+  </a>
+  </a>
+    <a href="https://firebase.google.com/" target="_blank">
+    <img src="https://img.shields.io/badge/Firebase-333333?logo=firebase" alt="Firebase">
+  </a>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.8.
+  <br>
 
-## Development server
+[See DEMO](https://inditex-todos.web.app/ 'See demostration')
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+</div>
 
-## Code scaffolding
+<details open="open">
+<summary > <h2 style="display:inline-block">📖 Table of Contents</h2>  </summary>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- 📋 [Requirements](#requirements)
+- 🔄 [Installation](#installation)
+- 🚀 [Run](#run)
 
-## Build
+</details>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## <a name="requirements"></a> 🛠️ Requirements
 
-## Running unit tests
+- Node v16.20.2
+- NPM v8.19.4
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+> [!NOTE]
+> The previous `Node` and `NPM` versions where used to develop the application. Other versions may work but they are not tested.
 
-## Running end-to-end tests
+## <a name="installation"></a> 🔄 Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clone the repository
+2. Install dependencies
 
-## Further help
+```bash
+npm install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## <a name="run"></a> 🚀 Run
+
+Run the application in development mode
+
+```bash
+npm start
+```
