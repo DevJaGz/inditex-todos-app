@@ -20,6 +20,9 @@ export class AppComponent implements OnInit {
     this.handleInitialTheme();
   }
 
+  /**
+   * Dispatch the action for the initial theme
+   */
   private handleInitialTheme(): void {
     if (this.isInitialThemeDark()) {
       this.store.dispatch(setThemeAction({ isDarkTheme: true }));
@@ -30,6 +33,12 @@ export class AppComponent implements OnInit {
     this.observeThemeChanges();
   }
 
+  /**
+   * Check if the initial theme is dark based on
+   * the last theme set in the browser local storage or
+   * the user preference color scheme
+   * True, if the initial theme is found as dark, otherwise false.
+   */
   private isInitialThemeDark(): boolean {
     const defaultView = this.document.defaultView;
     const window = defaultView?.window;
@@ -46,6 +55,9 @@ export class AppComponent implements OnInit {
     );
   }
 
+  /**
+   * Set Dark or Light Theme based on the theme changes
+   */
   private observeThemeChanges(): void {
     this.store.select(selectIsDarkThemeState).subscribe({
       next: isDarkTheme => {
@@ -58,16 +70,26 @@ export class AppComponent implements OnInit {
     });
   }
 
+  /**
+   * Set Dark Theme
+   */
   private setDarkTheme(): void {
     this.renderer.addClass(this.document.documentElement, 'dark');
     this.setThemeInLocalStorage('dark');
   }
 
+  /**
+   * Set Light Theme
+   */
   private setLightTheme(): void {
     this.renderer.removeClass(this.document.documentElement, 'dark');
     this.setThemeInLocalStorage('light');
   }
 
+  /**
+   * Set a theme in the browser local storage
+   * @param themeValue - Theme to save as value. 'dark' or 'light'
+   */
   private setThemeInLocalStorage(themeValue: string): void {
     const defaultView = this.document.defaultView;
     const localStorage = defaultView?.localStorage;
