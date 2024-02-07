@@ -13,8 +13,8 @@
     <img src="https://img.shields.io/badge/Angular-%23c3002f?logo=angular" alt="Angular">
   </a>
   </a>
-    <a href="https://firebase.google.com/" target="_blank">
-    <img src="https://img.shields.io/badge/NgRx-4b334d?logo=ngrx" alt="Firebase">
+    <a href="https://ngrx.io/" target="_blank">
+    <img src="https://img.shields.io/badge/NgRx-4b334d?logo=ngrx" alt="NgRx">
   </a>
   </a>
     <a href="https://firebase.google.com/" target="_blank">
