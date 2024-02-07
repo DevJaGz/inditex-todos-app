@@ -1,12 +1,12 @@
 <ng-container *ngIf="todo$ | async as todo; else emptyTmpl">
   <h2
     title=" {{ todo.name | titlecase }}"
-    class="text-3xl font-semibold text-center text-zinc-500 mt-10 sm:mt-20 line-clamp-3">
+    class="animate-fade-down text-3xl font-semibold text-center text-zinc-500 mt-10 sm:mt-20 line-clamp-3">
     {{ todo.name | titlecase }}
   </h2>
-  <p class="mt-4 text-center">{{ todo.description }}</p>
+  <p class="animate-fade-up mt-4 text-center">{{ todo.description }}</p>
   <a
-    class="flex items-center gap-1 w-fit mt-8 mx-auto text-white font-medium rounded-lg text-sm px-6 py-3 text-center bg-zinc-900 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-zinc-300 dark:bg-zinc-600 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800 transition-colors"
+    class="animate-fade-up flex items-center gap-1 w-fit mt-8 mx-auto text-white font-medium rounded-lg text-sm px-6 py-3 text-center bg-zinc-900 hover:bg-zinc-800 focus:ring-4 focus:outline-none focus:ring-zinc-300 dark:bg-zinc-600 dark:hover:bg-zinc-700 dark:focus:ring-zinc-800 transition-colors"
     routerLink="">
     <tabler-icon name="arrow-back-up" class="!w-5 !h-5"></tabler-icon>
     <span>Back</span></a

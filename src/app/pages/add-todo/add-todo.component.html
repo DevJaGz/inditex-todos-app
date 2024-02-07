@@ -1,5 +1,8 @@
-<form #form="ngForm" class="max-w-sm mx-auto mt-20" (ngSubmit)="addTodo()">
-  <div class="mb-5">
+<form
+  #form="ngForm"
+  class="max-w-sm mx-auto mt-20 animate-fade-up"
+  (ngSubmit)="addTodo()">
+  <div class="mb-5 animate-fade-right">
     <label
       for="name"
       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -14,7 +17,7 @@
       placeholder="Set a name for your To-Do"
       required />
   </div>
-  <div class="mb-5">
+  <div class="mb-5 animate-fade-left">
     <label
       for="description"
       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"

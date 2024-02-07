@@ -1,5 +1,5 @@
 <div
-  class="grid gap-4 px-4"
+  class="grid gap-4 px-4 animate-fade-up"
   style="grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr))">
   <ng-container *ngIf="todos$ | async as todos">
     <ng-container *ngIf="todos.length; else emptyTmpl">
