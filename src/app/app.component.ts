@@ -88,7 +88,7 @@ export class AppComponent implements OnInit {
 
   /**
    * Set a theme in the browser local storage
-   * @param themeValue - Theme to save as value. 'dark' or 'light'
+   * @param themeValue - Theme to save. 'dark' or 'light'
    */
   private setThemeInLocalStorage(themeValue: string): void {
     const defaultView = this.document.defaultView;

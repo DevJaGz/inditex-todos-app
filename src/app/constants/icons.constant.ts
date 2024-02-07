@@ -1,15 +1,15 @@
 import {
   IconEye,
   IconTrash,
-  IconBrandGithubFilled,
   IconBrightnessUp,
+  IconBrandGithub,
   IconMoonStars,
 } from 'angular-tabler-icons/icons';
 
 export const ICONS = {
   IconEye,
   IconTrash,
-  IconBrandGithubFilled,
+  IconBrandGithub,
   IconBrightnessUp,
   IconMoonStars,
 };
