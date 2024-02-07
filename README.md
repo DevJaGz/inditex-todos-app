@@ -1,6 +1,13 @@
 <h1 align="center">
   Inditex ToDo App
 </h1>
+
+<div align="center">
+
+[See DEMO](https://inditex-todos.web.app/ 'See demostration')
+
+</div>
+
 <div align="center">
   <a href="https://angular.io/" target="_blank">
     <img src="https://img.shields.io/badge/Angular-%23c3002f?logo=angular" alt="Angular">
@@ -13,11 +20,6 @@
     <a href="https://firebase.google.com/" target="_blank">
     <img src="https://img.shields.io/badge/Firebase-333333?logo=firebase" alt="Firebase">
   </a>
-
-  <br>
-
-[See DEMO](https://inditex-todos.web.app/ 'See demostration')
-
 </div>
 
 <details open="open">
