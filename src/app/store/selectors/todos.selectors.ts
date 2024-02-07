@@ -1,4 +1,4 @@
-import { MetaReducerState, TodosState } from '@interfaces';
+import { MetaReducerState, Todo, TodosState } from '@interfaces';
 import { createSelector } from '@ngrx/store';
 
 export const selectTodosState = (state: MetaReducerState): TodosState =>
@@ -6,10 +6,10 @@ export const selectTodosState = (state: MetaReducerState): TodosState =>
 
 export const selectTodosListState = createSelector(
   selectTodosState,
-  (state: TodosState) => state.list
+  (state: TodosState): Todo[] => state.list
 );
 
 export const selectSelectedTodoState = createSelector(
   selectTodosState,
-  (state: TodosState) => state.selected
+  (state: TodosState): Todo | null => state.selected
 );

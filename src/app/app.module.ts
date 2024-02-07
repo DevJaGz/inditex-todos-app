@@ -13,6 +13,7 @@ import { AddTodoComponent } from './pages/add-todo/add-todo.component';
 import { TodoDetailComponent } from './pages/todo-detail/todo-detail.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ICONS } from './constants/icons.constant';
+import { ThemeButtonComponent } from './components/theme-button/theme-button.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ICONS } from './constants/icons.constant';
     AddTodoComponent,
     TodoDetailComponent,
     NavbarComponent,
+    ThemeButtonComponent,
   ],
   imports: [
     BrowserModule,

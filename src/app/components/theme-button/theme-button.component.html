@@ -1,0 +1,17 @@
+<button
+  (click)="toggleTheme()"
+  *ngIf="isDarkTheme$ | async; else darkButtonTmpl"
+  type="button"
+  title="Set Light theme"
+  class="hover:text-zinc-200 grid place-items-center">
+  <tabler-icon name="brightness-up" class="w-5 h-5"></tabler-icon>
+</button>
+<ng-template #darkButtonTmpl>
+  <button
+    (click)="toggleTheme()"
+    type="button"
+    title="Set Dark theme"
+    class="hover:text-zinc-800 grid place-items-center">
+    <tabler-icon name="moon-stars" class="w-5 h-5"></tabler-icon>
+  </button>
+</ng-template>

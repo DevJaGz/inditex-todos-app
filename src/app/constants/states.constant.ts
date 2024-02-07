@@ -1,4 +1,4 @@
-import { Todo, TodosState } from '../interfaces';
+import { AppState, Todo, TodosState } from '../interfaces';
 
 export const INITIAL_TODO_STATE: Todo = {
   name: '',
@@ -24,4 +24,8 @@ export const INITIAL_TODOS_STATE: TodosState = {
     },
   ],
   selected: null,
+};
+
+export const INITIAL_APP_STATE: AppState = {
+  isDarkTheme: false,
 };
