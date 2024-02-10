@@ -3,7 +3,6 @@ import { Component, OnInit, Renderer2, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { setThemeAction } from '@store/actions';
 import { selectIsDarkThemeState } from '@store/selectors';
-import { initFlowbite } from 'flowbite';
 import { THEME_STORAGE_KEY } from './constants/app.constant';
 
 @Component({
@@ -16,7 +15,6 @@ export class AppComponent implements OnInit {
   private readonly document = inject(DOCUMENT);
 
   ngOnInit(): void {
-    initFlowbite();
     this.handleInitialTheme();
   }
 
