@@ -1,4 +1,11 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  ViewChild,
+  inject,
+} from '@angular/core';
 import { Todo } from '@interfaces';
 import { Store } from '@ngrx/store';
 import { addTodoAction } from '@store/actions';
@@ -12,7 +19,10 @@ import { Router } from '@angular/router';
   styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AddTodoComponent {
+export class AddTodoComponent implements AfterViewInit {
+  @ViewChild('name')
+  name!: ElementRef<HTMLInputElement>;
+
   private readonly store = inject(Store);
   private readonly router = inject(Router);
 
@@ -31,5 +41,13 @@ export class AddTodoComponent {
 
   navigateToList(): void {
     this.router.navigate(['']);
+  }
+
+  ngAfterViewInit(): void {
+    this.name.nativeElement.focus();
+    this.name.nativeElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    });
   }
 }
